@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "MoloChrome",
+    "version": "1.0.0",
+    "description": "Utilisez l'application Molotov directement depuis Google Chrome.",
+    "icons": {
+        "16": "Icon-16x16.png",
+        "24": "Icon-24x24.png",
+        "32": "Icon-32x32.png",
+        "48": "Icon-48x48.png",
+        "64": "Icon-64x64.png",
+        "96": "Icon-96x96.png",
+        "128": "Icon-128x128.png",
+        "256": "Icon-256x256.png",
+        "512": "Icon-512x512.png",
+        "1024": "Icon-1024x1024.png"
+    },
+    "author": "Jonathan Leroy",
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "minimum_chrome_version": "17",
+    "permissions": [
+        "webRequest", 
+        "webRequestBlocking",
+        "https://fapi.molotov.tv/*"
+    ]
+}
