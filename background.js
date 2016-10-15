@@ -9,7 +9,8 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
     },
     {
         urls: [
-            "https://fapi.molotov.tv/v2/auth/login"
+            "https://fapi.molotov.tv/v2/auth/login",
+            "https://fapi.molotov.tv/v2/auth/refresh/*"
         ],
         types: ["xmlhttprequest"]
     },
