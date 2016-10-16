@@ -16,3 +16,20 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
     },
     ["blocking", "requestHeaders"]
 );
+
+chrome.webRequest.onCompleted.addListener(
+    function(details) {
+        // User successfully logged in.
+        if (details.method == "POST"
+            && details.url == "https://fapi.molotov.tv/v2/auth/login"
+            && details.statusCode == "200") {
+                chrome.tabs.reload();
+        }
+    },
+    {
+        urls: [
+            "https://fapi.molotov.tv/v2/auth/login"
+        ],
+        types: ["xmlhttprequest"]
+    }
+);

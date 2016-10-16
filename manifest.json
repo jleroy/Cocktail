@@ -19,11 +19,22 @@
     "background": {
         "scripts": ["background.js"]
     },
+    "content_scripts": [
+        {
+            "matches": ["http://app.molotov.tv/*"],
+            "css": ["molochrome.css"],
+            "js": ["molochrome.js"],
+            "run_at": "document_start"
+        }
+    ],
     "homepage_url": "https://github.com/jleroy/MoloChrome",
     "minimum_chrome_version": "17",
     "permissions": [
-        "webRequest", 
-        "webRequestBlocking",
-        "https://fapi.molotov.tv/*"
+        "webRequest", "webRequestBlocking", "https://fapi.molotov.tv/*"
+    ],
+    "web_accessible_resources": [
+        "web_resources/topbar.html",
+        "web_resources/search.js",
+        "web_resources/img/*.svg"
     ]
 }

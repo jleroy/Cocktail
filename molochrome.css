@@ -1,0 +1,116 @@
+div.index__root___3mvAe {
+    height: 95%;
+}
+
+#topbar {
+    background: #2D292E;
+    display: flex;
+    height: 5%;
+    transition: transform .5s;
+}
+
+#topbar-empty {
+    margin: auto;
+}
+
+#topbar-search, 
+#topbar-separator,
+#topbar-username {
+    margin: auto 5px auto 5px;
+}
+
+#topbar-search-input {
+    border-radius: 15px;
+    font-size: 12px;
+    color: #D8D8D8;
+    cursor: text;
+    height: 25px;
+    border: 0;
+    letter-spacing: -.1px;
+    width: 200px;
+    padding: 0 0 0 30px;
+    -webkit-appearance: none;
+    outline: none;
+    background: #544f56 url('chrome-extension://__MSG_@@extension_id__/web_resources/img/quicklook.svg') no-repeat 10px 6px;
+    background-size: 14px;
+}
+
+#topbar-search-input::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+    background: url('chrome-extension://__MSG_@@extension_id__/web_resources/img/searchClose.svg') no-repeat center;
+    width: 22px;
+    height: 22px;
+    margin-right: 6px;
+    opacity: .7;
+    cursor: pointer;
+}
+
+#topbar-search-input::-webkit-search-cancel-button:hover {
+    opacity: 1;
+}
+
+#topbar-separator {
+    background: #656368;
+    border: 0;
+    width: 1px;
+    height: 20px;
+}
+
+#topbar-username {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    color: #D8D8D8;
+    padding-right: 20px;
+}
+
+#topbar-username-value {
+    background: url('chrome-extension://__MSG_@@extension_id__/web_resources/img/down-arrow.svg') no-repeat right center;
+    padding-right: 30px;
+}
+
+#topbar-username-value:hover {
+    opacity: 0.6;
+}
+
+#topbar-dropdown {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: left;
+    top: 38px;
+    position: absolute;
+    background: #544f56;
+    right: 20px;
+    width: 110px;
+    box-shadow: 2px 4px 6px rgba(0,0,0,0.3);
+    border-radius: 3px;
+    width: 210px;
+    z-index: 99;
+}
+
+#topbar-dropdown li {
+    padding: 13px 15px;
+    border-bottom: 1px solid #403B44;
+}
+
+#topbar-dropdown li a {
+    color: #D8D8D8;
+}
+
+#topbar-dropdown li:hover {
+    font-size: 13px;
+}
+
+#topbar-dropdown .disconnect {
+    color: #F74D4A;
+    background: #403B44;
+    border-radius: 0 0 3px 3px;
+}
+
+.hide {
+    display: none !important;
+}
