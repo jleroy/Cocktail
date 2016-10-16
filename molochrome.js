@@ -61,4 +61,15 @@ function molotov_logout() {
 // Check if user is logged in.
 if (localStorage.getItem("session_v1_1")) {
     set_topbar();
+    
+    // Wait for the page to load before doing any modification
+    // on application content.
+    window.addEventListener("load", function() {
+        setTimeout(function() {
+            // Resize lateral (yellow) column.
+            var column = document.querySelector('.index__root___3mvAe');
+            column.style.height = "95%";
+        },
+        500); // Dirty hack :(
+    });
 }
