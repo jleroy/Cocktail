@@ -15,6 +15,7 @@
         "512": "Icon-512x512.png",
         "1024": "Icon-1024x1024.png"
     },
+    "browser_action": {},
     "author": "Jonathan Leroy",
     "background": {
         "scripts": ["background.js"]
@@ -30,7 +31,8 @@
     "homepage_url": "https://github.com/jleroy/MoloChrome",
     "minimum_chrome_version": "17",
     "permissions": [
-        "webRequest", "webRequestBlocking", "https://fapi.molotov.tv/*"
+        "webRequest", "webRequestBlocking", "https://fapi.molotov.tv/*",
+        "tabs"
     ],
     "web_accessible_resources": [
         "web_resources/topbar.html",

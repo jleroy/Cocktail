@@ -33,3 +33,9 @@ chrome.webRequest.onCompleted.addListener(
         types: ["xmlhttprequest"]
     }
 );
+
+chrome.browserAction.onClicked.addListener(
+    function(details) {
+        chrome.tabs.create({url: "http://app.molotov.tv/"});
+    }
+);
