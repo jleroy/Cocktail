@@ -59,7 +59,7 @@ function molotov_logout() {
 }
 
 // Check if user is logged in.
-if (localStorage.getItem("session_v1_1")) {
+if (localStorage.getItem("mltv_session")) {
     set_topbar();
     
     // Wait for the page to load before doing any modification
