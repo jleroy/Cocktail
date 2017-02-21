@@ -2,7 +2,7 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
     function(details) {
         details.requestHeaders.push({
             name: "X-Molotov-Agent",
-            value: "{\"app_id\":\"electron_app\",\"app_build\":2,\"app_version_name\":\"1.0.0\",\"type\":\"desktop\",\"os\":\"\",\"os_version\":\"\",\"manufacturer\":\"\",\"serial\":\"\",\"model\":\"\",\"brand\":\"\"}"
+            value: "{\"app_id\":\"electron_app\",\"app_build\":3,\"app_version_name\":\"1.2.2\",\"type\":\"desktop\",\"electron_version\":\"1.4.12\",\"os\":\"Unknown\",\"os_version\":\"Unknown\",\"manufacturer\":\"MoloChrome\",\"serial\":\"Unknown\",\"model\":\"MoloChrome\",\"brand\":\"MoloChrome\"}"
         });
         
         return {requestHeaders: details.requestHeaders};
