@@ -9,8 +9,8 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
     },
     {
         urls: [
-            "https://fapi.molotov.tv/v2/auth/login",
-            "https://fapi.molotov.tv/v2/auth/refresh/*",
+            "https://fapi.molotov.tv/v3/auth/login",
+            "https://fapi.molotov.tv/v3/auth/refresh/*",
             "https://fapi.molotov.tv/v2/me/assets*"
         ],
         types: ["xmlhttprequest"]
@@ -22,14 +22,14 @@ chrome.webRequest.onCompleted.addListener(
     function(details) {
         // User successfully logged in.
         if (details.method == "POST"
-            && details.url == "https://fapi.molotov.tv/v2/auth/login"
+            && details.url == "https://fapi.molotov.tv/v3/auth/login"
             && details.statusCode == "200") {
                 chrome.tabs.reload();
         }
     },
     {
         urls: [
-            "https://fapi.molotov.tv/v2/auth/login"
+            "https://fapi.molotov.tv/v3/auth/login"
         ],
         types: ["xmlhttprequest"]
     }
