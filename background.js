@@ -37,6 +37,6 @@ chrome.webRequest.onCompleted.addListener(
 
 chrome.browserAction.onClicked.addListener(
     function(details) {
-        chrome.tabs.create({url: "http://app.molotov.tv/"});
+        chrome.tabs.create({url: "https://app.molotov.tv/"});
     }
 );
