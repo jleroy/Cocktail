@@ -1,4 +1,7 @@
-chrome.webRequest.onBeforeSendHeaders.addListener(
+if (typeof browser == "undefined")
+    var browser = chrome;
+
+browser.webRequest.onBeforeSendHeaders.addListener(
     function(details) {
         details.requestHeaders.push({
             name: "X-Molotov-Agent",
@@ -20,13 +23,13 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
     ["blocking", "requestHeaders"]
 );
 
-chrome.webRequest.onCompleted.addListener(
+browser.webRequest.onCompleted.addListener(
     function(details) {
         // User successfully logged in.
         if (details.method == "POST"
             && details.url == "https://fapi.molotov.tv/v3/auth/login"
             && details.statusCode == "200") {
-                chrome.tabs.reload();
+                browser.tabs.reload();
         }
     },
     {
@@ -37,8 +40,8 @@ chrome.webRequest.onCompleted.addListener(
     }
 );
 
-chrome.browserAction.onClicked.addListener(
+browser.browserAction.onClicked.addListener(
     function(details) {
-        chrome.tabs.create({url: "https://app.molotov.tv/"});
+        browser.tabs.create({url: "https://app.molotov.tv/"});
     }
 );

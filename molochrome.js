@@ -1,3 +1,6 @@
+if (typeof browser == "undefined")
+    var browser = chrome;
+
 var topbar = document.createElement("div");
 topbar.id = "topbar";
 var xhr = new XMLHttpRequest();
@@ -8,7 +11,7 @@ var xhr = new XMLHttpRequest();
 // master/sendtoinstapaper.js#L286
 function set_extension_id(html) {
     return html.replace(/__MSG_@@extension_id__/g, function(m, key) {
-        return chrome.i18n.getMessage("@@extension_id");
+        return browser.i18n.getMessage("@@extension_id");
     });
 }
 
@@ -44,12 +47,12 @@ function set_topbar() {
             
             var searchjs = document.createElement("script");
             searchjs.type = "text/javascript";
-            searchjs.src = chrome.extension.getURL('/web_resources/search.js');
+            searchjs.src = browser.extension.getURL('/web_resources/search.js');
             document.head.appendChild(searchjs);
         }
     }
     
-    xhr.open("GET", chrome.extension.getURL('/web_resources/topbar.html'), true);
+    xhr.open("GET", browser.extension.getURL('/web_resources/topbar.html'), true);
     xhr.send();
 }
 
