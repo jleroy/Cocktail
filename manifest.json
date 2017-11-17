@@ -22,7 +22,7 @@
     },
     "content_scripts": [
         {
-            "matches": ["http://app.molotov.tv/*"],
+            "matches": ["https://app.molotov.tv/*"],
             "css": ["molochrome.css"],
             "js": ["molochrome.js"],
             "run_at": "document_start"
