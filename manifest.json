@@ -1,11 +1,9 @@
 {
     "manifest_version": 2,
-    "name": "MoloChrome",
+    "name": "Cocktail",
     "version": "1.1.0",
-    "description": "Utilisez l'application Molotov directement depuis Google Chrome.",
+    "description": "Utilisez l'application Molotov directement depuis votre naviguateur",
     "icons": {
-        "16": "Icon-16x16.png",
-        "24": "Icon-24x24.png",
         "32": "Icon-32x32.png",
         "48": "Icon-48x48.png",
         "64": "Icon-64x64.png",
