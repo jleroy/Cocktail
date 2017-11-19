@@ -28,7 +28,13 @@ browser.webRequest.onCompleted.addListener(
         // User successfully logged in.
         if (details.method == "POST"
             && details.url == "https://fapi.molotov.tv/v3/auth/login"
-            && details.statusCode == "200") {
+            && details.statusCode == "200"
+            // When the maximum number of registered devices is reached, the
+            // login "cookie" is immediately cleared and a device removing
+            // dialog is opened. When this happens, we should NOT refresh
+            // the page, otherwise the user is immediately redirected to the
+            // login page.
+            && localStorage.getItem("mltv_session")) {
                 browser.tabs.reload();
         }
     },
