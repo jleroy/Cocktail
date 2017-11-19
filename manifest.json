@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Cocktail",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "description": "Utilisez l'application Molotov directement depuis votre naviguateur",
     "icons": {
         "32": "Icon-32x32.png",
