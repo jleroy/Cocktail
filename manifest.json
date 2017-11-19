@@ -21,8 +21,8 @@
     "content_scripts": [
         {
             "matches": ["https://app.molotov.tv/*"],
-            "css": ["molochrome.css"],
-            "js": ["molochrome.js"],
+            "css": ["cocktail.css"],
+            "js": ["cocktail.js"],
             "run_at": "document_start"
         }
     ],
