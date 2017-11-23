@@ -1,8 +1,26 @@
 {
-    "manifest_version": 2,
-    "name": "Cocktail",
-    "version": "1.2.0",
-    "description": "Utilisez l'application Molotov directement depuis votre naviguateur",
+    "applications": {
+        "gecko": {
+            "strict_min_version": "57.0"
+        }
+    },
+    "author": "Jonathan Leroy",
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "browser_action": {
+        "default_icon": "Cocktail.svg"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://app.molotov.tv/*"],
+            "css": ["cocktail.css"],
+            "js": ["cocktail.js"],
+            "run_at": "document_start"
+        }
+    ],
+    "description": "Utilisez l'application Molotov directement depuis votre naviguateur.",
+    "homepage_url": "https://github.com/jleroy/Cocktail",
     "icons": {
         "32": "Icon-32x32.png",
         "48": "Icon-48x48.png",
@@ -13,25 +31,14 @@
         "512": "Icon-512x512.png",
         "1024": "Icon-1024x1024.png"
     },
-    "browser_action": {},
-    "author": "Jonathan Leroy",
-    "background": {
-        "scripts": ["background.js"]
-    },
-    "content_scripts": [
-        {
-            "matches": ["https://app.molotov.tv/*"],
-            "css": ["cocktail.css"],
-            "js": ["cocktail.js"],
-            "run_at": "document_start"
-        }
-    ],
-    "homepage_url": "https://github.com/jleroy/MoloChrome",
+    "manifest_version": 2,
     "minimum_chrome_version": "17",
+    "name": "Cocktail",
     "permissions": [
         "webRequest", "webRequestBlocking", "https://fapi.molotov.tv/*", "https://multi-screen.molotov.tv/*", "https://jessica.molotov.tv/*", "https://app.molotov.tv/*",
         "tabs"
     ],
+    "version": "1.2.0",
     "web_accessible_resources": [
         "web_resources/topbar.html",
         "web_resources/search.js",
