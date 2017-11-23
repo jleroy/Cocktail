@@ -38,7 +38,7 @@
         "webRequest", "webRequestBlocking", "https://fapi.molotov.tv/*", "https://multi-screen.molotov.tv/*", "https://jessica.molotov.tv/*", "https://app.molotov.tv/*",
         "tabs"
     ],
-    "version": "1.2.0",
+    "version": "1.2.1",
     "web_accessible_resources": [
         "web_resources/topbar.html",
         "web_resources/search.js",
