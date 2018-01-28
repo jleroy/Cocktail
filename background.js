@@ -12,9 +12,13 @@ browser.webRequest.onBeforeSendHeaders.addListener(
     },
     {
         urls: [
+            "https://fapi.molotov.tv/v2/config",
+            "https://fapi.molotov.tv/v2/references",
+            "https://fapi.molotov.tv/v2/me/assets*",
+            "https://fapi.molotov.tv/v2/me/actions*",
+            "https://fapi.molotov.tv/v2/me/whats-up*",
             "https://fapi.molotov.tv/v3/auth/login",
             "https://fapi.molotov.tv/v3/auth/refresh/*",
-            "https://fapi.molotov.tv/v2/me/assets*",
             "https://multi-screen.molotov.tv/v3/ping*",
             "https://jessica.molotov.tv/video/preroll*"
         ],
