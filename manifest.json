@@ -10,14 +10,6 @@
             "64": "icons/Icon-64x64.png"
         }
     },
-    "content_scripts": [
-        {
-            "matches": ["https://app.molotov.tv/*"],
-            "css": ["cocktail.css"],
-            "js": ["cocktail.js"],
-            "run_at": "document_start"
-        }
-    ],
     "description": "Utilisez l'application Molotov directement depuis votre naviguateur.",
     "homepage_url": "https://github.com/jleroy/Cocktail",
     "icons": {
