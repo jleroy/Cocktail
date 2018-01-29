@@ -49,3 +49,41 @@ browser.browserAction.onClicked.addListener(
         browser.tabs.create({url: "https://app.molotov.tv/"});
     }
 );
+
+browser.contextMenus.create({
+    id: "my-account",
+    title: "Mon compte",
+    contexts: ["browser_action"],
+    onclick: function() {
+        browser.tabs.create({url: "https://account.molotov.tv/account/profile"});
+    }
+});
+
+browser.contextMenus.create({
+    id: "on-tv",
+    title: "Molotov sur mon téléviseur",
+    contexts: ["browser_action"],
+    onclick: function() {
+        browser.tabs.create({url: "https://account.molotov.tv/account/tv"});
+    }
+});
+
+browser.contextMenus.create({
+    id: "faq",
+    title: "Aide et contact",
+    contexts: ["browser_action"],
+    onclick: function() {
+        if (confirm("Attention ! Cocktail n'est pas une application officielle de la société Molotov. Pour signaler un bug concernant Cocktail, utilisez le menu \"Signaler un bug\".")) {
+            browser.tabs.create({url: "https://molotovtv.secure.force.com/"});
+        }
+    }
+});
+
+browser.contextMenus.create({
+    id: "github",
+    title: "Signaler un bug",
+    contexts: ["browser_action"],
+    onclick: function() {
+        browser.tabs.create({url: "https://github.com/jleroy/Cocktail/issues"});
+    }
+});

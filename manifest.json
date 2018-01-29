@@ -35,7 +35,8 @@
     "name": "Cocktail",
     "permissions": [
         "webRequest", "webRequestBlocking", "https://fapi.molotov.tv/*", "https://multi-screen.molotov.tv/*", "https://jessica.molotov.tv/*", "https://app.molotov.tv/*",
-        "tabs"
+        "tabs",
+        "contextMenus"
     ],
     "version": "1.2.1",
     "web_accessible_resources": [
