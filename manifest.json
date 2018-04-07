@@ -10,7 +10,7 @@
             "64": "icons/Icon-64x64.png"
         }
     },
-    "description": "Utilisez l'application Molotov directement depuis votre naviguateur.",
+    "description": "Utilisez l'application Molotov directement depuis votre navigateur.",
     "homepage_url": "https://github.com/jleroy/Cocktail",
     "icons": {
         "32": "icons/Icon-32x32.png",
